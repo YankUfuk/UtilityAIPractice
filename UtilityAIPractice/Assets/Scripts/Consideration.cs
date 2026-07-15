@@ -3,26 +3,23 @@ using UnityEngine;
 
 namespace UtilityPractice.Core
 {
-    public abstract class Action : ScriptableObject
+    public abstract class Consideration : MonoBehaviour
     {
         public string name;
         private float _score;
 
         public float score
         {
-            get { return _score;}
-            set { this._score = Mathf.Clamp01(value); }
+            get => _score;
+            set => _score = value;
         }
-
-        public Consideration[] consideration;
 
         public virtual void Awake()
         {
             score = 0;
         }
 
-        public abstract void Execute();
-
+        public abstract void ScoreConsideration();
     }
 }
 
