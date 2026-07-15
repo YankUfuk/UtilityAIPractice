@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UtilityPractice.Core
 {
-    public abstract class Consideration : MonoBehaviour
+    public abstract class Consideration : ScriptableObject
     {
         public string name;
         private float _score;
@@ -19,7 +19,7 @@ namespace UtilityPractice.Core
             score = 0;
         }
 
-        public abstract void ScoreConsideration();
+        public abstract float ScoreConsideration();
     }
 }
 
